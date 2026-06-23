@@ -1,0 +1,29 @@
+# torch and torchvision MUST be pre-installed with matching CUDA builds.
+nvidia-ncore>=19.0.0
+
+# pycolmap for data parsing
+git+https://github.com/brandonyzhao/pycolmap@a2a5671b0f6ab641957dd4c5a78cabcf220c28ee
+# (optional) nerfacc for torch version rasterization
+# git+https://github.com/nerfstudio-project/nerfacc
+
+viser
+git+https://github.com/nerfstudio-project/nerfview@4538024fe0d15fd1a0e4d760f3695fc44ca72787
+imageio[ffmpeg]
+numpy
+scipy
+scikit-learn
+tqdm
+torchmetrics==1.8.2
+opencv-python-headless
+tyro>=0.8.8,!=1.0.9,!=1.0.10
+Pillow
+piexif
+tensorboard
+tensorly
+pyyaml
+matplotlib
+# CUDA extensions that require a CUDA-enabled Torch build and CUDA_HOME.
+fused-ssim @ git+https://github.com/rahul-goel/fused-ssim@a7c48d6dd7ac6dc39a7958c7c4452e0b10418f38 ; platform_system != "Windows"
+fused-bilagrid @ git+https://github.com/harry7557558/fused-bilagrid@49f0ef06c9f81810fb9b5dd9027cf1844950cc16 ; platform_system != "Windows"
+splines
+# PPISP is optional and can be installed separately with --no-build-isolation when needed.
